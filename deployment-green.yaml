@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-first-app-green
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-first-app
+      version: green
+  template:
+    metadata:
+      labels:
+        app: my-first-app
+        version: green
+    spec:
+      containers:
+      - name: my-first-app
+        image: matchho80/my-first-app:2
