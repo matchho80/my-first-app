@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: my-first-app
-        image: matchho80/my-first-app:${BUILD_NUMBER}
+        image: matchho80/my-first-app:latest
         ports:
         - containerPort: 80
